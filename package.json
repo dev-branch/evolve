@@ -4,15 +4,20 @@
   "homepage": "https://github.com/coding-house-apr2015/poseidon",
   "author": "Chyld Medford <chyld.medford@gmail.com>",
   "license": "BSD",
-  "scripts":{
+  "bin": {
+    "coveralls": "./node_modules/coveralls/bin/coveralls.js"
+  },
+  "scripts": {
     "postinstall": "bower install && gulp build",
-    "test": "./node_modules/karma/bin/karma start --single-run"
+    "test": "./node_modules/karma/bin/karma start --single-run",
+    "coverage": "karma start --log-level=disable --reporters coverage --single-run && cat reports/coverage/report-lcov/lcov.info | coveralls"
   },
   "devDependencies": {
     "angular-mocks": "^1.3.15",
     "bower": "^1.4.1",
     "browser-sync": "^2.6.5",
     "concurrent-transform": "^1.0.0",
+    "coveralls": "^2.11.2",
     "gulp": "^3.8.11",
     "gulp-awspublish": "^1.0.6",
     "gulp-bower": "0.0.10",
