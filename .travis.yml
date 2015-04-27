@@ -6,4 +6,4 @@ notifications:
 script:
   - npm test
 after_script:
-  - npm run coverage
+  - npm run tc

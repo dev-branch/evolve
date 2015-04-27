@@ -10,7 +10,8 @@
   "scripts": {
     "postinstall": "bower install && gulp build",
     "test": "./node_modules/karma/bin/karma start --single-run",
-    "coverage": "./node_modules/karma/bin/karma start --log-level=disable --reporters coverage --single-run && cat reports/coverage/report-lcov/lcov.info | coveralls"
+    "coverage": "./node_modules/karma/bin/karma start --log-level=disable --reporters coverage --single-run && cat reports/coverage/report-lcov/lcov.info | coveralls",
+    "tc": "./node_modules/karma/bin/karma start --log-level=disable --reporters coverage --single-run && cat reports/coverage/report-lcov/lcov.info"
   },
   "devDependencies": {
     "angular-mocks": "^1.3.15",
